@@ -20,19 +20,18 @@ struct UnsplashAPI {
         return components
     }
     
-    static func feedUrl(orderBy: String = "popular", perPage: Int = 10, path: String = "/photos") -> URL? {
+    static func feedUrl(orderBy: String, perPage: Int, path: String) -> URL? {
         
         var finalUrl = unsplashApiBaseUrl()
         
         let queryItems = [
-            URLQueryItem(name: "orderBy", value: orderBy),
-            URLQueryItem(name: "perPage", value: String(perPage))
+            URLQueryItem(name: "order_by", value: orderBy),
+            URLQueryItem(name: "per_page", value: String(perPage))
         ]
         finalUrl.queryItems?.append(contentsOf: queryItems)
         finalUrl.path = path
         
         return finalUrl.url
     }
-
 }
 

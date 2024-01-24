@@ -20,3 +20,12 @@ struct Urls: Codable {
 struct User: Codable {
     let name: String
 }
+
+struct UnsplashTopic: Codable, Identifiable {
+    let id, slug: String
+    let cover_photo: CoverPhoto
+}
+
+struct CoverPhoto: Codable {
+    let urls: Urls
+}

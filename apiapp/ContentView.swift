@@ -35,11 +35,36 @@ struct ContentView: View {
             Button(action: {
                 Task {
                     await feedState.fetchHomeFeed(path: "/photos")
+                    await feedState.fetchHomeTopic(perPage: 3)
                 }
             }, label: {
                 Text("Load Data")
             })
             ScrollView {
+                if let topicList = feedState.homeTopic{
+                    HStack{
+                        ForEach(topicList) { topic in
+                            NavigationLink(destination: TopicView(topic: topic)) {
+                                VStack {
+                                    AsyncImage(url: URL(string: topic.cover_photo.urls.raw)) { tpc in
+                                        tpc.centerCropped()
+                                    } placeholder: {
+                                        ProgressView()
+                                    }.frame(height: 100).clipShape(RoundedRectangle(cornerRadius: 12))
+                                    Text(topic.slug)
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    HStack{
+                        ForEach(0..<3) { _ in
+                            RoundedRectangle(cornerRadius: 10.0).frame(height: 100).foregroundColor(.gray)
+                                .opacity(0.4)
+                        }
+                    }
+                }
+                
                 if let imgList = feedState.homeFeed{
                     LazyVGrid (columns: column, content: {
                     
