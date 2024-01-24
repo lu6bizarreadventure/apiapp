@@ -69,11 +69,13 @@ struct ContentView: View {
                     LazyVGrid (columns: column, content: {
                     
                         ForEach(imgList) { img in
-                            AsyncImage(url: URL(string: img.urls.raw)) { image in
-                                image.centerCropped()
-                            } placeholder: {
-                                ProgressView()
-                            }.frame(height: 150).clipShape(RoundedRectangle(cornerRadius: 12))
+                            NavigationLink(destination: ImageView(image: img)) {
+                                AsyncImage(url: URL(string: img.urls.raw)) { image in
+                                    image.centerCropped()
+                                } placeholder: {
+                                    ProgressView()
+                                }.frame(height: 150).clipShape(RoundedRectangle(cornerRadius: 12))
+                            }
                         }
                     })
                 } else {

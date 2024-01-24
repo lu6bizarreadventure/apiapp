@@ -17,6 +17,7 @@
 		8F9A1E6B2B61048100191976 /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A1E6A2B61048100191976 /* UnsplashAPI.swift */; };
 		8F9A1E6D2B6110E100191976 /* FeedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A1E6C2B6110E100191976 /* FeedState.swift */; };
 		8F9A1E6F2B6165FE00191976 /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A1E6E2B6165FE00191976 /* TopicView.swift */; };
+		8F9A1E712B616E3F00191976 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A1E702B616E3F00191976 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8F9A1E6A2B61048100191976 /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
 		8F9A1E6C2B6110E100191976 /* FeedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedState.swift; sourceTree = "<group>"; };
 		8F9A1E6E2B6165FE00191976 /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
+		8F9A1E702B616E3F00191976 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				8F9A1E6A2B61048100191976 /* UnsplashAPI.swift */,
 				8F9A1E6C2B6110E100191976 /* FeedState.swift */,
 				8F9A1E6E2B6165FE00191976 /* TopicView.swift */,
+				8F9A1E702B616E3F00191976 /* ImageView.swift */,
 			);
 			path = apiapp;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F9A1E712B616E3F00191976 /* ImageView.swift in Sources */,
 				8F9A1E652B60F52400191976 /* PListManager.swift in Sources */,
 				8F9A1E6B2B61048100191976 /* UnsplashAPI.swift in Sources */,
 				8F766F4D2B5FEBFA005F4BC5 /* ContentView.swift in Sources */,
