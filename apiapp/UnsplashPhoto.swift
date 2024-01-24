@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UnsplashPhoto: Codable {
+struct UnsplashPhoto: Codable, Identifiable {
     let id, slug: String
     let urls: Urls
     let user: User
@@ -15,7 +15,6 @@ struct UnsplashPhoto: Codable {
 
 struct Urls: Codable {
     let raw, full, regular, small: String
-    let thumb: String
 }
 
 struct User: Codable {
